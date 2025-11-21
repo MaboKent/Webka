@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+
+Sitemap: http://localhost:3000/sitemap.xml
+Sitemap: https://mabokent.github.io/Webka/sitemap.xml
+

@@ -1,0 +1,12 @@
+{
+  "name": "isk-webproject",
+  "version": "1.0.0",
+  "description": "ISK интернет-магазин",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server public -p 3000 -o"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

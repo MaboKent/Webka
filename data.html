@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Добавление и вывод товаров - ISK</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+<body class="bg-gray-100">
+
+    <header class="bg-blue-600 p-4">
+        <div class="max-w-screen-xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-white text-2xl font-bold">ISK</a>
+            <nav>
+                <a href="index.html" class="text-white mr-4">Главная</a>
+                <a href="data.html" class="text-white font-bold">Добавление товаров</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-screen-md mx-auto p-6 bg-white rounded-lg shadow mt-6">
+        <h1 class="text-3xl font-bold mb-6 text-center">Добавить товар</h1>
+        <form id="productForm" class="space-y-4">
+            <div>
+                <label for="productName" class="block mb-1 font-semibold">Название товара</label>
+                <input type="text" id="productName" class="w-full p-2 border rounded" placeholder="Введите название" required />
+            </div>
+            <div>
+                <label for="productPrice" class="block mb-1 font-semibold">Цена (₽)</label>
+                <input type="number" id="productPrice" class="w-full p-2 border rounded" placeholder="Введите цену" required min="0" />
+            </div>
+            <div>
+                <label for="productDescription" class="block mb-1 font-semibold">Описание</label>
+                <textarea id="productDescription" class="w-full p-2 border rounded" placeholder="Введите описание" rows="3"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">Добавить товар</button>
+        </form>
+
+        <section class="mt-10">
+            <h2 class="text-2xl font-bold mb-4">Список товаров</h2>
+            <ul id="productList" class="space-y-4"></ul>
+        </section>
+    </main>
+
+    <script type="module" src="js/data.js"></script>
+
+</body>
+</html>

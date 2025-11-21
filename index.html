@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISK - Интернет-магазин электроники</title>
+    <meta name="description" content="ISK - лучший интернет-магазин электроники. Ноутбуки, смартфоны, телевизоры и аксессуары.">
+    
+    <!-- Стили -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+<body class="bg-gray-100">
+    
+    <!-- Шапка сайта - семантический тег -->
+    <header class="bg-blue-600 p-4">
+        <div class="max-w-screen-xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-white text-2xl font-bold">ISK</a>
+            <input id="searchInput" type="text" placeholder="Поиск товаров" class="w-1/3 p-2 rounded-md">
+            <nav class="flex space-x-4">
+
+                <a href="profile.html" class="text-white">Профиль</a>
+                <a href="rre.html" class="text-white">Регистрация</a>
+                <a href="reg.html" class="text-white">Вход</a>
+                <a href="data.html" class="text-white">Добавить товар</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Хлебные крошки -->
+    <nav class="max-w-screen-xl mx-auto p-4" aria-label="Хлебные крошки">
+        <ol class="flex space-x-2 text-sm text-gray-500">
+            <li><a href="index.html" class="hover:text-blue-600">Главная</a></li>
+        </ol>
+    </nav>
+
+    <!-- Основной контент - семантический тег -->
+    <main class="max-w-screen-xl mx-auto">
+        
+        <!-- Секция популярных категорий -->
+        <section class="p-4" aria-labelledby="categories-heading">
+            <h2 id="categories-heading" class="text-2xl font-bold mb-4">Популярные категории</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <article class="p-4 bg-white shadow rounded-lg text-center">
+                    <img src="image/noyt.png" alt="Ноутбуки" class="mx-auto w-48" loading="lazy">
+                    <h3 class="mt-2 font-semibold">Ноутбуки</h3>
+                </article>
+                <article class="p-4 bg-white shadow rounded-lg text-center">
+                    <img src="image/tel.png" alt="Смартфоны" class="mx-auto w-48" loading="lazy">
+                    <h3 class="mt-2 font-semibold">Смартфоны</h3>
+                </article>
+                <article class="p-4 bg-white shadow rounded-lg text-center">
+                    <img src="image/televisor.png" alt="Телевизоры" class="mx-auto w-48" loading="lazy">
+                    <h3 class="mt-2 font-semibold">Телевизоры</h3>
+                </article>
+                <article class="p-4 bg-white shadow rounded-lg text-center">
+                    <img src="image/naush.png" alt="Наушники" class="mx-auto w-48" loading="lazy">
+                    <h3 class="mt-2 font-semibold">Наушники</h3>
+                </article>
+            </div>
+        </section>
+
+        <!-- Секция топ предложений (ДОБАВИТЬ ЭТУ СЕКЦИЮ!) -->
+        <section class="p-4" aria-labelledby="offers-heading">
+            <h2 id="offers-heading" class="text-2xl font-bold mb-4">Топ предложения</h2>
+            <div id="topOffers" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Товары будут загружаться из Firebase -->
+            </div>
+        </section>
+
+        <!-- Секция популярных брендов -->
+        <section class="p-4" aria-labelledby="brands-heading">
+            <h2 id="brands-heading" class="text-2xl font-bold mb-4">Популярные бренды</h2>
+            <div class="flex space-x-4" role="list">
+                <img src="image/Apple.png" alt="Apple" class="h-12" loading="lazy" role="listitem">
+                <img src="image/samsungbrend.png" alt="Samsung" class="h-12" loading="lazy" role="listitem">
+                <img src="image/HP.png" alt="HP" class="h-12" loading="lazy" role="listitem">
+                <img src="image/LG.png" alt="LG" class="h-12" loading="lazy" role="listitem">
+            </div>
+        </section>
+
+        <!-- Секция отзывов -->
+        <section class="p-4" aria-labelledby="reviews-heading">
+            <h2 id="reviews-heading" class="text-2xl font-bold mb-4">Отзывы клиентов</h2>
+            <blockquote class="bg-gray-100 p-4 rounded-lg">
+                <p class="italic">"Отличный магазин, всегда покупаю технику здесь!"</p>
+                <footer class="font-bold mt-2">- Иван Петров</footer>
+            </blockquote>
+        </section>
+
+        <!-- Секция акций -->
+        <section class="p-4" aria-labelledby="news-heading">
+            <h2 id="news-heading" class="text-2xl font-bold mb-4">Новости и акции</h2>
+            <article class="bg-yellow-100 p-4 rounded-lg">
+                <h3 class="font-bold">🔥 Скидки до 50% на ноутбуки!</h3>
+                <p class="mt-2">Успейте купить до конца месяца по суперценам!</p>
+            </article>
+        </section>
+
+    </main>
+
+    <!-- Подвал сайта - семантический тег -->
+    <footer class="bg-gray-800 text-white p-6 mt-6">
+        <div class="max-w-screen-xl mx-auto flex justify-between">
+            <p>&copy; 2025 ISK. Все права защищены.</p>
+            <nav class="flex space-x-4" aria-label="Дополнительная навигация">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Контакты</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Firebase скрипт (ИСПРАВЛЕННЫЙ) -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
+        import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDSyvQcQ09MxokfvHStaiy-uoVy-g8inpI",
+            authDomain: "webinternetmarket.firebaseapp.com",
+            databaseURL: "https://webinternetmarket-default-rtdb.firebaseio.com",
+            projectId: "webinternetmarket",
+            storageBucket: "webinternetmarket.firebasestorage.app",
+            messagingSenderId: "1021043818901",
+            appId: "1:1021043818901:web:a9a4936d56dad3a03a769c",
+            measurementId: "G-P370T6VPZQ"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        const topOffers = document.getElementById("topOffers");
+        const searchInput = document.getElementById("searchInput");
+
+        let productsList = [];
+
+        function createProductCard(product) {
+    const article = document.createElement("article");
+    article.className = "p-4 bg-white shadow rounded-lg";
+
+    article.innerHTML = `
+        <img src="image/tovar.png" alt="${product.productName}" class="w-full h-48 object-cover rounded" loading="lazy">
+        <h3 class="mt-2 font-bold text-lg">${product.productName}</h3>
+        <p class="text-gray-700">Цена: <span class="font-bold">${product.Cost} ₽</span></p>
+        <p class="text-sm text-gray-500 mt-1">${product.productDescription || ""}</p>
+        <button class="mt-2 w-full bg-blue-900 text-white py-2 rounded hover:bg-blue-700 transition-colors">Купить</button>
+    `;
+    return article;
+}
+
+
+        function renderProducts(products) {
+            if (!topOffers) {
+                console.error('Элемент topOffers не найден!');
+                return;
+            }
+            
+            topOffers.innerHTML = "";
+            
+            if (products.length === 0) {
+                topOffers.innerHTML = '<p class="col-span-full text-center text-gray-500">Товары не найдены</p>';
+                return;
+            }
+            
+            products.forEach(product => {
+                const card = createProductCard(product);
+                topOffers.appendChild(card);
+            });
+        }
+
+        // Загрузка товаров из Firebase
+        onValue(ref(database, "Tovar"), (snapshot) => {
+    const products = snapshot.val();
+    productsList = products ? Object.values(products) : [];
+
+    console.log("Сырые данные Firebase:", productsList);
+    productsList.forEach((p, i) => console.log(`${i}:`, p));
+
+    renderProducts(productsList);
+});
+
+
+        // Поиск товаров
+        if (searchInput) {
+    searchInput.addEventListener("input", () => {
+        const query = searchInput.value.trim().toLowerCase();
+
+        const filtered = productsList.filter(p =>
+            String(p.productName || "")
+                .trim()
+                .toLowerCase()
+                .includes(query)
+        );
+
+        renderProducts(filtered);
+    });
+}
+
+    </script>
+</body>
+</html>
